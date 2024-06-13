@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tambahsatudetik (waktu) {
+            let[Jam, Menit, Detik] = waktu.split(':').map(Number)
+            if (Detik < 59){
+                Detik += 1
+            }else {
+                Detik = 0
+                if (Menit < 59) {
+                    Menit += 1
+                }else {
+                    Menit = 0
+                    if (Jam < 23){
+                        Jam += 1
+                    }else {
+                        Jam = 0
+                    }
+                }
+            }
+
+            return `${Jam.toString().padStart(2, '0')}:${Menit.toString().padStart(2, '0')}:${Detik.toString().padStart(2, '0')}`;      
+        }
+
+        let waktu1 = '02:13:23'
+        let waktu2 = '02:13:59'
+        let waktu3 = '02:59:59'
+        let waktu4 = '23:59:59'
+
+        
+        console.log(`Setelah penambahan 1 detik: ${tambahsatudetik(waktu1)}`)
+        console.log(`Setelah penambahan 1 detik: ${tambahsatudetik(waktu2)}`)
+        console.log(`Setelah penambahan 1 detik: ${tambahsatudetik(waktu3)}`)
+        console.log(`Setelah penambahan 1 detik: ${tambahsatudetik(waktu4)}`)
+        
+    </script>
+</body>
+</html>

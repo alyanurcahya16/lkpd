@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pegawai = 22505197803
+        let no = pegawai % 100
+        let thn = Math.floor (pegawai/100)%10000
+        let bln = Math.floor (pegawai/1000000)%100
+        let tnggl = Math.floor (pegawai/100000000)%100
+        let golng = Math.floor (pegawai/10000000000)
+        switch (bln) {
+                case 1 :
+                bln = "Januari"
+                break 
+                case 2 :
+                bln = "Februari"
+                break 
+                case 3 :
+                bln = "Maret"
+                break 
+                case 4 :
+                bln = "April"
+                break 
+                case 5 :
+                bln = "Mei"
+                break 
+                case 6 :
+                bln = "Juni"
+                break 
+                case 7 :
+                bln = "Juli"
+                break 
+                case 8 :
+                bln = "Agustus"
+                break 
+                case 9 :
+                bln = "September"
+                break 
+                case 10 :
+                bln = "Oktober"
+                break 
+                case 11 :
+                bln = "November"
+                break 
+                case 12 :
+                bln = "Desember"
+                break 
+            }
+
+            console.log (golng,tnggl,bln,thn,no)
+
+    </script>
+</body>
+</html>
